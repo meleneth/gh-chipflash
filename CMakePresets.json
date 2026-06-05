@@ -1,0 +1,28 @@
+{
+  "version": 5,
+  "configurePresets": [
+    {
+      "name": "arm-linux",
+      "displayName": "ARM Linux",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build-arm",
+      "toolchainFile": "${sourceDir}/cmake/arm-linux-toolchain.cmake",
+      "cacheVariables": {
+        "CHIPFLASH_BUILD_TESTS": "ON",
+        "CHIPFLASH_QEMU_EXECUTABLE": "qemu-arm"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "arm-linux",
+      "configurePreset": "arm-linux"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "arm-linux",
+      "configurePreset": "arm-linux"
+    }
+  ]
+}
