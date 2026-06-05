@@ -59,7 +59,7 @@ bool test_write_sequence() {
     if (!expect_eq(fake.bus_values[1], static_cast<uint8_t>(0x20), "unexpected data value")) {
         return false;
     }
-    if (!expect_eq(fake.delays.size(), static_cast<size_t>(10), "unexpected delay count")) {
+    if (!expect_eq(fake.delays.size(), static_cast<size_t>(12), "unexpected delay count")) {
         return false;
     }
 
